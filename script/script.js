@@ -1,10 +1,7 @@
 const inputCep = document.querySelector('.cep')
 const btnCep = document.querySelector('[data-btn-cep]')
 const resultadoCep = document.querySelector('.resultadoCep')
-
-
 btnCep.addEventListener('click', handleClick)
-
 
 function handleClick(event) {
   event.preventDefault()
@@ -38,14 +35,12 @@ function buscaCep(cep) {
         if(cep.erro){
             resultadoCep.innerHTML = "<p>Não foi possível localizar seu cep!</p>"
         }else{
-            resultadoCep.innerHTML = 
-            ` 
+            resultadoCep.innerHTML = ` 
                 <p>Cep : ${cep.cep}</p>
                 <p>Rua : ${cep.logradouro}</p>
                 <p>Complemento : ${cep.complemento}</p>
                 <p>Cidade : ${cep.localidade}</p>
-                <p>Estado : ${cep.uf}</p>   
-            `
+                <p>Estado : ${cep.uf}</p>`
         }
     }))
 }
