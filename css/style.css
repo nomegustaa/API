@@ -33,21 +33,34 @@ body{
     font-size: 35px;
     margin: 25px 0;
 }
-.buscarCep input[type="number"]{
+.cep{
     font-family: 'Roboto', sans-serif;
     padding: 5px;
     outline: none;
     border-radius: 5px;
     border: 1px solid #725FF5;
-    margin: 25px 0;
+    margin: 25px 0 0px 0;
 }
-input[type="number"]::-webkit-outer-spin-button,
-input[type="number"]::-webkit-inner-spin-button {
+.cep.inputError{
+    border: 1px solid  #ff7a7a;
+}
+.cep::-webkit-outer-spin-button,
+.cep::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-input[type="number"]::placeholder{
+.cep::placeholder{
     font-family: 'Roboto', sans-serif;
+}
+.error{
+    visibility: hidden;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: #ff7a7a;
+}
+.error.messageActive{
+    visibility: initial;
+    color: #ff7a7a;
 }
 .buscarCep input[type="button"]{
     padding: 5px;
@@ -58,7 +71,7 @@ input[type="number"]::placeholder{
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     cursor: pointer;
-    margin: 0 0 25px 0;
+    margin: 15px 0;
     outline: none;
 }
 .resultadoCep p {
@@ -75,9 +88,3 @@ input[type="number"]::placeholder{
       transform: translate3d(0, 0, 0);
     }
   }
-.swal2-title {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
-    margin: 0;
-}
